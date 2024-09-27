@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+float r,A, B ;
+printf("Enter the radius : ");
+scanf("%f",&r);
+
+A=3.14*(r*r);
+B = 2*3.14*r;
+
+printf("Area of Circle is : %f",A);
+printf("\nCircumference of Circle is : %f",B);
+
+}
