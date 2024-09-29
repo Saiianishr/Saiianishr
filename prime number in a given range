@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+
+int lower_limit, upper_limit, iteration;
+int flag; // A variable flag to indicate if the number is prime or not
+printf("Enter the range:\n");
+printf("Lower limit: ");
+scanf("%d",&lower_limit);
+printf("Upper limit: ");
+scanf("%d",&upper_limit);
+
+printf("The prime numbers in the range (%d,%d) are:\n", lower_limit, upper_limit);
+
+while (lower_limit < upper_limit)
+{
+flag = 0;
+for(iteration = 2; iteration <= lower_limit/2; iteration++)
+{
+if(lower_limit % iteration == 0)
+{
+flag = 1; // Condition for non-prime number
+break;
+}
+}
+if (flag == 0)
+{
+printf("%d ", lower_limit);
+}
+lower_limit++;
+}
+return 0;
+}
