@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+int number, i;
+int flag = 0;
+
+printf("Enter a positive number to check if it is prime or not ");
+scanf("%d", &number);
+
+for(i = 2; i <= number/2; i++)
+{
+if(number%i == 0) // Condition for a non-prime number
+{
+flag = 1; // To indicate that the number is non-prime
+break;
+}
+}
+
+if (number == 1)
+{
+printf("1 is not a prime number.\n");
+}
+else
+{
+if (flag == 0)
+printf("%d is a prime number.\n", number);
+else
+printf("%d is not a prime number.\n", number);
+}
+return 0;
+}
