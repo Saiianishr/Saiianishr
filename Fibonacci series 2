@@ -2,9 +2,6 @@
 #include <math.h>
 int main()
 {
-
-printf("Welcome to DataFlair tutorials!\n\n");
-
 int term1 = 0, term2 = 1, next_term = 0, limit;
 
 printf("Enter a number till which you want to display the Fibonacci series: ");
