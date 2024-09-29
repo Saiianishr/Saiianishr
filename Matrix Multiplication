@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main()
+{
+int row1, column1, row2, column2, sum = 0;
+int i1, i2, i3;
+int matrix1[10][10], matrix2[10][10], product[10][10];
+printf("Enter the number of rows and columns of first matrix: ");
+scanf("%d%d", &row1, &column1);
+printf("Enter the elements of first matrix\n\n");
+for (i1 = 0; i1 < row1; i1++)
+{
+for (i2 = 0; i2 < column1; i2++)
+{
+scanf("%d", &matrix1[i1][i2]);
+}
+}
+printf("Enter the number of rows and columns of second matrix: ");
+scanf("%d%d", &row2, &column2);
+if (column1 != row2)
+{
+printf("The matrices can't be multiplied.\n\n");
+}
+else
+{
+printf("Enter the elements of second matrix\n\n");
+for (i1 = 0; i1 < row1; i1++)
+{
+for (i2 = 0; i2 < column2; i2++)
+{
+scanf("%d", &matrix2[i1][i2]);
+}
+}
+for (i1 = 0; i1 < row1; i1++)
+{
+for (i2 = 0; i2 < column2; i2++)
+{
+for (i3 = 0; i3 < row2; i3++)
+{
+sum = sum + matrix1[i1][i3]*matrix2[i3][i2];
+}
+product[i1][i2] = sum;
+sum = 0;
+}
+}
+printf("The product of the matrices is:\n\n");
+for (i1 = 0; i1 < row1; i1++)
+{
+for (i2 = 0; i2 < column2; i2++)
+printf("%d\t", product[i1][i2]);
+printf("\n");
+}
+}
+return 0;
+}
